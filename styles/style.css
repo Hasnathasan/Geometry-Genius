@@ -2,3 +2,14 @@
 *{
     font-family: 'Inter', sans-serif;
 }
+li{
+    list-style: none;
+    display: inline;
+}
+.inline-p p{
+    display: inline;
+}
+input{
+    outline: none;
+    padding: 0 10px;
+}
