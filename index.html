@@ -25,132 +25,132 @@
             <div class="col-md-9 col-12">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                     <div class="col">
-                    <div class="card h-100 py-3 px-2 text-center">
+                    <div id="each-card1" class="card h-100 py-3 px-2 text-center">
                         <img src="images/triangle.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                         <div class="card-body">
                             <h4>Triangle</h4>
                             <p class="fs-5 fw-medium">Area(A) = 0.5 x b x h</p>
-                            <div class="d-flex justify-content-between mb-3 w-75 mx-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3 w-75 mx-auto">
                                 <p>b= <span id="triangle-b">4</span> cm</p>
                                 <p>h= <span id="triangle-h">5</span> cm</p>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i id="edit-tringle-value" class="fa-regular fa-pen-to-square " title="Edit Value"></i>
                             </div>
-                            <div class="mb-3 w-100">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="b">
+                            <div id="hidden1" class="mb-3 w-100 d-none">
+                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-tringle-1" value="b">
                                 <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="h">
+                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-tringle-2" value="h">
                                 <span>cm</span>
-                                <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                <i id="set-tringle-value" class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                             </div>
                             <button id="btn-tringle" class="btn btn-primary w-100 my-2">Calculate</button>
                         </div>
                     </div>
                     </div>
                     <div class="col">
-                        <div class="card h-100 py-3 px-2 text-center">
+                        <div id="each-card2" class="card h-100 py-3 px-2 text-center">
                             <img src="images/rectangle.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                             <div class="card-body">
                                 <h4>Rectangle</h4>
                                 <p class="fs-5 fw-medium">Area(A) = W x I</p>
-                                <div class="d-flex justify-content-between mb-3 w-75 mx-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-3 w-75 mx-auto">
                                     <p>W= <span id="rectangle-w">4</span> cm</p>
                                     <p>I= <span id="rectangle-i">5</span> cm</p>
-                                    <i class="fa-regular fa-pen-to-square"></i>
+                                    <i class="fa-regular fa-pen-to-square" title="Edit Value"></i>
                                 </div>
                                 <div class="mb-3 w-100">
                                     <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="W">
                                     <span>cm</span>
                                     <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="I">
                                     <span>cm</span>
-                                    <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                    <i class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                                 </div>
                                 <button id="btn-rectangle" class="btn btn-primary w-100 my-2">Calculate</button>
                             </div>
                         </div>
                         </div>
                     <div class="col">
-                    <div class="card h-100 py-3 px-2 text-center">
+                    <div id="each-card3" class="card h-100 py-3 px-2 text-center">
                         <img src="images/parallelogram.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                         <div class="card-body">
                             <h4>Parallelogram</h4>
                             <p class="fs-5 fw-medium">Area(A) = b x h</p>
-                            <div class="d-flex justify-content-between mb-3 w-75 mx-auto">
+                            <div class="d-flex justify-content-between align-items-center mb-3 w-75 mx-auto">
                                 <p>b= <span id="parallelogram-b">10</span> cm</p>
                                 <p>h= <span id="parallelogram-h">12</span> cm</p>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i class="fa-regular fa-pen-to-square" title="Edit Value"></i>
                             </div>
                             <div class="mb-3 w-100">
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="b">
                                 <span>cm</span>
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="h">
                                 <span>cm</span>
-                                <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                <i class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                             </div>
                             <button id="btn-parallelogram" class="btn btn-primary w-100 my-2">Calculate</button>
                         </div>
                     </div>
                     </div>
                     <div class="col">
-                    <div class="card h-100 py-3 px-2 text-center">
+                    <div id="each-card4" class="card h-100 py-3 px-2 text-center">
                         <img src="images/rhombus.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                         <div class="card-body">
                             <h4>Rhombus</h4>
                             <p class="fs-5 fw-medium">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                            <div class="d-flex justify-content-between w-75 mb-3 mx-auto">
+                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
                                 <p>d<sub>1</sub>= <span id="rhombus-d1">16</span> cm</p>
                                 <p>d<sub>2</sub>= <span id="rhombus-d2">8</span> cm</p>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i class="fa-regular fa-pen-to-square" title="Edit Value"></i>
                             </div>
                             <div class="mb-3 w-100">
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="b">
                                 <span>cm</span>
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="h">
                                 <span>cm</span>
-                                <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                <i class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                             </div>
                             <button id="btn-rhombus" class="btn btn-primary w-100 my-2">Calculate</button>
                         </div>
                     </div>
                     </div>
                     <div class="col">
-                    <div class="card h-100 py-3 px-2 text-center">
+                    <div id="each-card5" class="card h-100 py-3 px-2 text-center">
                         <img src="images/pentagon.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                         <div class="card-body">
                             <h4>Pentagon</h4>
                             <p class="fs-5 fw-medium">Area(A) = 0.5 x p x b</p>
-                            <div class="d-flex justify-content-between w-75 mb-3 mx-auto">
+                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
                                 <p>p= <span id="pentagon-p">6</span> cm</p>
                                 <p>b= <span id="pentagon-b">10</span> cm</p>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i class="fa-regular fa-pen-to-square" title="Edit Value"></i>
                             </div>
                             <div class="mb-3 w-100">
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="b">
                                 <span>cm</span>
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="h">
                                 <span>cm</span>
-                                <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                <i class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                             </div>
                             <button id="btn-pentagon" class="btn btn-primary w-100 my-2">Calculate</button>
                         </div>
                     </div>
                     </div>
                     <div class="col">
-                    <div class="card h-100 py-3 px-2 text-center">
+                    <div id="each-card6" class="card h-100 py-3 px-2 text-center">
                         <img src="images/ellipse.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
                         <div class="card-body">
                             <h4>Ellipse</h4>
                             <p class="fs-5 fw-medium">Area(A) = πab</p>
-                            <div class="d-flex justify-content-between w-75 mb-3 mx-auto">
+                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
                                 <p>a= <span id="ellipse-a">10</span> cm</p>
                                 <p>b= <span id="ellipse-b">4</span> cm</p>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                                <i class="fa-regular fa-pen-to-square" title="Edit Value"></i>
                             </div>
                             <div class="mb-3 w-100">
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="b">
                                 <span>cm</span>
                                 <input class="bg-secondary-subtle border-0 w-25" type="text" id="" value="h">
                                 <span>cm</span>
-                                <i class="fa-solid ms-2 text-primary fa-square-check"></i>
+                                <i class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
                             </div>
                             <button id="btn-ellipse" class="btn btn-primary w-100 my-2">Calculate</button>
                         </div>
