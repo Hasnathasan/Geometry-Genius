@@ -12,8 +12,8 @@ document.getElementById('btn-tringle').addEventListener('click', function () {
 // Area of Rectangle
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const W = getInnerText('rectangle-w');
-    const I = getInnerText('rectangle-i');
-    const A = W * I;
+    const L = getInnerText('rectangle-l');
+    const A = W * L;
     setAns('Rectangle', A);
 });
 
@@ -107,7 +107,7 @@ document.getElementById('each-card6').addEventListener('mouseenter', function(ev
 
 
 //    ---------------------
-//     Edit Area of Items
+//     Edit value of Items
 //    ---------------------
 // 
 
@@ -121,8 +121,63 @@ document.getElementById('edit-tringle-value').addEventListener('click', function
     const input2 = document.getElementById('input-tringle-2');
     input2.value = '';
 })
+document.getElementById('edit-rectangle-value').addEventListener('click', function () {
+    const hideElement = document.getElementById('hidden2');
+    hideElement.classList.remove('d-none');
+    const input1 = document.getElementById('input-rectangle-1');
+    input1.value = '';
+    const input2 = document.getElementById('input-rectangle-2');
+    input2.value = '';
+})
+document.getElementById('edit-parallelogram-value').addEventListener('click', function () {
+    const hideElement = document.getElementById('hidden3');
+    hideElement.classList.remove('d-none');
+    const input1 = document.getElementById('input-parallelogram-1');
+    input1.value = '';
+    const input2 = document.getElementById('input-parallelogram-2');
+    input2.value = '';
+})
+document.getElementById('edit-rhombus-value').addEventListener('click', function () {
+    const hideElement = document.getElementById('hidden4');
+    hideElement.classList.remove('d-none');
+    const input1 = document.getElementById('input-rhombus-1');
+    input1.value = '';
+    const input2 = document.getElementById('input-rhombus-2');
+    input2.value = '';
+})
+document.getElementById('edit-pentagon-value').addEventListener('click', function () {
+    const hideElement = document.getElementById('hidden5');
+    hideElement.classList.remove('d-none');
+    const input1 = document.getElementById('input-pentagon-1');
+    input1.value = '';
+    const input2 = document.getElementById('input-pentagon-2');
+    input2.value = '';
+})
+document.getElementById('edit-ellipse-value').addEventListener('click', function () {
+    const hideElement = document.getElementById('hidden6');
+    hideElement.classList.remove('d-none');
+    const input1 = document.getElementById('input-ellipse-1');
+    input1.value = '';
+    const input2 = document.getElementById('input-ellipse-2');
+    input2.value = '';
+})
 
 
 document.getElementById('set-tringle-value').addEventListener('click', function(){
     setValue('input-tringle-1', 'input-tringle-2', 'triangle-b', 'triangle-h');
+})
+document.getElementById('set-rectangle-value').addEventListener('click', function(){
+    setValue('input-rectangle-1', 'input-rectangle-2', 'rectangle-w', 'rectangle-l');
+})
+document.getElementById('set-parallelogram-value').addEventListener('click', function(){
+    setValue('input-parallelogram-1', 'input-parallelogram-2', 'parallelogram-b', 'parallelogram-h');
+})
+document.getElementById('set-rhombus-value').addEventListener('click', function(){
+    setValue('input-rhombus-1', 'input-rhombus-2', 'rhombus-d1', 'rhombus-d2');
+})
+document.getElementById('set-pentagon-value').addEventListener('click', function(){
+    setValue('input-pentagon-1', 'input-pentagon-2', 'pentagon-p', 'pentagon-b');
+})
+document.getElementById('set-ellipse-value').addEventListener('click', function(){
+    setValue('input-ellipse-1', 'input-ellipse-2', 'ellipse-a', 'ellipse-b');
 })
