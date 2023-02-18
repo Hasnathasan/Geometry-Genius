@@ -36,6 +36,12 @@ function setAns(name, A){
     const li1 = document.createElement('li');
     const li2 = document.createElement('li');
     const button = document.createElement('button');
+    div.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'inline-p', 'mb-3', 'split-div', 'fs-6');
+    button.classList.add('btn', 'btn-primary', 'fs-6');
+    const splitDivs = document.getElementsByClassName('split-div');
+    const number = splitDivs.length + 1;
+    const serial = document.createElement('li');
+    serial.innerText = number + '.';
     li1.innerText = name;
     li2.innerText = A;
     button.innerText = 'Convert to ';
@@ -51,13 +57,13 @@ function setAns(name, A){
     m2.appendChild(sup2);
     li2.appendChild(cm2);
     button.appendChild(m2);
+    div.appendChild(serial);
     div.appendChild(li1);
     div.appendChild(li2);
     div.appendChild(button);
     const setAddress = document.getElementById('area-ans');
     setAddress.appendChild(div);
-    div.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'inline-p', 'mb-3', 'split-div');
-    button.classList.add('btn', 'btn-primary');
+    
 }
 
 
