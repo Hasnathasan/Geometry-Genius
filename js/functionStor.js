@@ -2,6 +2,10 @@ function getInnerText(id) {
     const innerText = document.getElementById(id).innerText;
     return innerText;
 }
+function getValueFromInput(id){
+  const value = document.getElementById(id).value;
+  return value;
+}
 // function setAns(name, A){
 //     const div = document.createElement('div');
 //     const li1 = document.createElement('li');

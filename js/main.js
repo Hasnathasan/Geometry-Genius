@@ -1,20 +1,37 @@
-// Area of Tringle
+// ==================================
+// Area of Tringle With Validation
+// ==================================
 document.getElementById('btn-tringle').addEventListener('click', function () {
-    const b = getInnerText('triangle-b');
-    const h = getInnerText('triangle-h');
-    const A = 0.5 * b * h;
-    setAns('Triangle', A);
+    const b = parseFloat(getValueFromInput('input-tringle-1'));
+    console.log(b);
+    const h = parseFloat(getValueFromInput('input-tringle-2'));
+    if(typeof b == 'number' && b >= 0 && typeof h == 'number' && h >= 0){
+        const A = 0.5 * b * h;
+        setAns('Triangle', A);
+    }
+    else{
+        alert('Invalid Value!  Provide valid Number.');
+    }
+    
 });
 
 
 
 
-// Area of Rectangle
+// ==================================
+// Area of Rectangle With Validation
+// ==================================
+
 document.getElementById('btn-rectangle').addEventListener('click', function () {
-    const W = getInnerText('rectangle-w');
-    const L = getInnerText('rectangle-l');
-    const A = W * L;
-    setAns('Rectangle', A);
+    const W = parseFloat(getValueFromInput('input-rectangle-1'));
+    const L = parseFloat(getValueFromInput('input-rectangle-2'));
+    if(typeof W == 'number' && W >= 0 && typeof L == 'number' && L >= 0){
+        const A = W * L ;
+        setAns('Rectangle', A);
+    }
+    else{
+        alert('Invalid Value!  Provide valid Number.');
+    }
 });
 
 
@@ -71,64 +88,46 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 document.getElementById('each-card1').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 document.getElementById('each-card2').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 document.getElementById('each-card3').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 document.getElementById('each-card4').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 document.getElementById('each-card5').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 document.getElementById('each-card6').addEventListener('mouseenter', function(event) {
     const color = getRandomColor();
     const eachItem = event.target;
-    console.log(eachItem);
     eachItem.style.backgroundColor = color;
 })
 
 
+
+
+
+
+
 //    ---------------------
-//     Edit value of Items
+//     Edit value of Input
 //    ---------------------
 // 
 
 
-
-document.getElementById('edit-tringle-value').addEventListener('click', function () {
-    const hideElement = document.getElementById('hidden1');
-    hideElement.classList.remove('d-none');
-    const input1 = document.getElementById('input-tringle-1');
-    input1.value = '';
-    const input2 = document.getElementById('input-tringle-2');
-    input2.value = '';
-})
-document.getElementById('edit-rectangle-value').addEventListener('click', function () {
-    const hideElement = document.getElementById('hidden2');
-    hideElement.classList.remove('d-none');
-    const input1 = document.getElementById('input-rectangle-1');
-    input1.value = '';
-    const input2 = document.getElementById('input-rectangle-2');
-    input2.value = '';
-})
 document.getElementById('edit-parallelogram-value').addEventListener('click', function () {
     const hideElement = document.getElementById('hidden3');
     hideElement.classList.remove('d-none');
@@ -163,12 +162,7 @@ document.getElementById('edit-ellipse-value').addEventListener('click', function
 })
 
 
-document.getElementById('set-tringle-value').addEventListener('click', function(){
-    setValue('input-tringle-1', 'input-tringle-2', 'triangle-b', 'triangle-h');
-})
-document.getElementById('set-rectangle-value').addEventListener('click', function(){
-    setValue('input-rectangle-1', 'input-rectangle-2', 'rectangle-w', 'rectangle-l');
-})
+
 document.getElementById('set-parallelogram-value').addEventListener('click', function(){
     setValue('input-parallelogram-1', 'input-parallelogram-2', 'parallelogram-b', 'parallelogram-h');
 })
