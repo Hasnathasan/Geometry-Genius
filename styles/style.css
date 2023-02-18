@@ -13,3 +13,6 @@ input{
     outline: none;
     padding: 0 10px;
 }
+.fa-square-check{
+    font-size: 20px;
+}
