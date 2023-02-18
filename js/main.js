@@ -47,7 +47,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     const b = getInnerText('parallelogram-b');
     const h = getInnerText('parallelogram-h');
     const A = b * h;
-    setAns('parallelogram', A);
+    setAns('Parallelogram', A);
 });
 
 
@@ -59,7 +59,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
     const d1 = getInnerText('rhombus-d1');
     const d2 = getInnerText('rhombus-d2');
     const A = 0.5 * d1 * d2;
-    setAns('rhombus', A);
+    setAns('Rhombus', A);
 });
 
 
@@ -71,7 +71,7 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
     const p = getInnerText('pentagon-p');
     const b = getInnerText('pentagon-b');
     const A = 0.5 * p * b;
-    setAns('pentagon', A);
+    setAns('Pentagon', A);
 });
 
 
@@ -83,7 +83,7 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
     const a = getInnerText('ellipse-a');
     const b = getInnerText('ellipse-b');
     const A = (3.14 * a * b).toFixed(2);
-    setAns('ellipse', A);
+    setAns('Ellipse', A);
 });
 
 // ---------------------------
