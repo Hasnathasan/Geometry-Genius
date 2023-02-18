@@ -1,164 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geomatry Calculation</title>
-    <link rel="stylesheet" href="./styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/e0ebe67689.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="rounded py-2 px-3 my-5 d-flex justify-content-between align-items-center bg-primary-subtle mx-auto" style="max-width: 1300px;">
-        <div>
-            <h2 class="fw-bold">Interactive</h2>
-            <h4>Geometry Genius</h4>
-        </div>
-        <div>
-            <button id="blog" class="btn btn-primary fw-semibold">Blog</button>
-        </div>
+    <link rel="stylesheet" href="./styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e0ebe67689.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header
+      class="rounded py-2 px-3 my-5 d-flex justify-content-between align-items-center bg-primary-subtle mx-auto"
+      style="max-width: 1300px"
+    >
+      <div>
+        <h2 class="fw-bold">Interactive</h2>
+        <h4>Geometry Genius</h4>
+      </div>
+      <div>
+        <button id="blog" class="btn btn-primary fw-semibold">Blog</button>
+      </div>
     </header>
 
-    <main class="mx-auto mb-5" style="max-width: 1300px;">
-        <div class="row">
-            <div class="col-md-9 col-12">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-                    <div class="col">
-                    <div id="each-card1" class="card h-100 py-3 px-2 text-center">
-                        <img src="images/triangle.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                        <div class="card-body">
-                            <h4>Triangle</h4>
-                            <p class="fs-5 fw-medium">Area(A) = 0.5 x b x h</p>
-                            <div class="mb-3 w-100">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-tringle-1" value="b">
-                                <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-tringle-2" value="h">
-                                <span>cm</span>
-                            </div>
-                            <button id="btn-tringle" class="btn btn-primary w-100 my-2">Calculate</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                        <div id="each-card2" class="card h-100 py-3 px-2 text-center">
-                            <img src="images/rectangle.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                            <div class="card-body">
-                                <h4>Rectangle</h4>
-                                <p class="fs-5 fw-medium">Area(A) = W x I</p>
-                                <div class="mb-3 w-100">
-                                    <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-rectangle-1" value="W">
-                                    <span>cm</span>
-                                    <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-rectangle-2" value="I">
-                                    <span>cm</span>
-                                </div>
-                                <button id="btn-rectangle" class="btn btn-primary w-100 my-2">Calculate</button>
-                            </div>
-                        </div>
-                        </div>
-                    <div class="col">
-                    <div id="each-card3" class="card h-100 py-3 px-2 text-center">
-                        <img src="images/parallelogram.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                        <div class="card-body">
-                            <h4>Parallelogram</h4>
-                            <p class="fs-5 fw-medium">Area(A) = b x h</p>
-                            <div class="d-flex justify-content-between align-items-center mb-3 w-75 mx-auto">
-                                <p>b= <span id="parallelogram-b">10</span> cm</p>
-                                <p>h= <span id="parallelogram-h">12</span> cm</p>
-                                <i id="edit-parallelogram-value" class="fa-regular fa-pen-to-square" title="Edit Value"></i>
-                            </div>
-                            <div id="hidden3" class="mb-3 w-100 d-none">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-parallelogram-1" value="b">
-                                <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-parallelogram-2" value="h">
-                                <span>cm</span>
-                                <i id="set-parallelogram-value" class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
-                            </div>
-                            <button id="btn-parallelogram" class="btn btn-primary w-100 my-2">Calculate</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div id="each-card4" class="card h-100 py-3 px-2 text-center">
-                        <img src="images/rhombus.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                        <div class="card-body">
-                            <h4>Rhombus</h4>
-                            <p class="fs-5 fw-medium">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
-                                <p>d<sub>1</sub>= <span id="rhombus-d1">16</span> cm</p>
-                                <p>d<sub>2</sub>= <span id="rhombus-d2">8</span> cm</p>
-                                <i id="edit-rhombus-value" class="fa-regular fa-pen-to-square" title="Edit Value"></i>
-                            </div>
-                            <div id="hidden4" class="mb-3 w-100 d-none">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-rhombus-1" value="b">
-                                <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-rhombus-2" value="h">
-                                <span>cm</span>
-                                <i id="set-rhombus-value" class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
-                            </div>
-                            <button id="btn-rhombus" class="btn btn-primary w-100 my-2">Calculate</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div id="each-card5" class="card h-100 py-3 px-2 text-center">
-                        <img src="images/pentagon.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                        <div class="card-body">
-                            <h4>Pentagon</h4>
-                            <p class="fs-5 fw-medium">Area(A) = 0.5 x p x b</p>
-                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
-                                <p>p= <span id="pentagon-p">6</span> cm</p>
-                                <p>b= <span id="pentagon-b">10</span> cm</p>
-                                <i id="edit-pentagon-value" class="fa-regular fa-pen-to-square" title="Edit Value"></i>
-                            </div>
-                            <div id="hidden5" class="mb-3 w-100 d-none">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-pentagon-1" value="b">
-                                <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-pentagon-2" value="h">
-                                <span>cm</span>
-                                <i id="set-pentagon-value" class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
-                            </div>
-                            <button id="btn-pentagon" class="btn btn-primary w-100 my-2">Calculate</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <div id="each-card6" class="card h-100 py-3 px-2 text-center">
-                        <img src="images/ellipse.png" class="card-img-top w-75 mx-auto my-3" style="height: 155px;" >
-                        <div class="card-body">
-                            <h4>Ellipse</h4>
-                            <p class="fs-5 fw-medium">Area(A) = πab</p>
-                            <div class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto">
-                                <p>a= <span id="ellipse-a">10</span> cm</p>
-                                <p>b= <span id="ellipse-b">4</span> cm</p>
-                                <i id="edit-ellipse-value" class="fa-regular fa-pen-to-square" title="Edit Value"></i>
-                            </div>
-                            <div id="hidden6" class="mb-3 w-100 d-none">
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-ellipse-1" value="b">
-                                <span>cm</span>
-                                <input class="bg-secondary-subtle border-0 w-25" type="text" id="input-ellipse-2" value="h">
-                                <span>cm</span>
-                                <i id="set-ellipse-value" class="fa-solid ms-2 text-primary fa-square-check" title="Set Value"></i>
-                            </div>
-                            <button id="btn-ellipse" class="btn btn-primary w-100 my-2">Calculate</button>
-                        </div>
-                    </div>
-                    </div>
+    <main class="mx-auto mb-5" style="max-width: 1300px">
+      <div class="row">
+        <div class="col-md-9 col-12">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+              <div id="each-card1" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/triangle.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Triangle</h4>
+                  <p class="fs-5 fw-medium">Area(A) = 0.5 x b x h</p>
+                  <div class="mb-3 w-100">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-tringle-1"
+                      value="b"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-tringle-2"
+                      value="h"
+                    />
+                    <span>cm</span>
+                  </div>
+                  <button id="btn-tringle" class="btn btn-primary w-100 my-2">
+                    Calculate
+                  </button>
                 </div>
+              </div>
             </div>
-            <div class="col-md-3 col-12">
-                <div id="area-ans" class="card px-2 w-100" style="height: 400px;">
-                    <h5 class="text-decoration-underline text-center p-3">Area Calculation</h5>
+            <div class="col">
+              <div id="each-card2" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/rectangle.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Rectangle</h4>
+                  <p class="fs-5 fw-medium">Area(A) = W x I</p>
+                  <div class="mb-3 w-100">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-rectangle-1"
+                      value="W"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-rectangle-2"
+                      value="I"
+                    />
+                    <span>cm</span>
+                  </div>
+                  <button id="btn-rectangle" class="btn btn-primary w-100 my-2">
+                    Calculate
+                  </button>
                 </div>
+              </div>
             </div>
+            <div class="col">
+              <div id="each-card3" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/parallelogram.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Parallelogram</h4>
+                  <p class="fs-5 fw-medium">Area(A) = b x h</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3 w-75 mx-auto"
+                  >
+                    <p>b= <span id="parallelogram-b">10</span> cm</p>
+                    <p>h= <span id="parallelogram-h">12</span> cm</p>
+                    <i
+                      id="edit-parallelogram-value"
+                      class="fa-regular fa-pen-to-square"
+                      title="Edit Value"
+                    ></i>
+                  </div>
+                  <div id="hidden3" class="mb-3 w-100 d-none">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-parallelogram-1"
+                      value="b"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-parallelogram-2"
+                      value="h"
+                    />
+                    <span>cm</span>
+                    <i
+                      id="set-parallelogram-value"
+                      class="fa-solid ms-2 text-primary fa-square-check"
+                      title="Set Value"
+                    ></i>
+                  </div>
+                  <button
+                    id="btn-parallelogram"
+                    class="btn btn-primary w-100 my-2"
+                  >
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div id="each-card4" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/rhombus.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Rhombus</h4>
+                  <p class="fs-5 fw-medium">
+                    Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub>
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto"
+                  >
+                    <p>d<sub>1</sub>= <span id="rhombus-d1">16</span> cm</p>
+                    <p>d<sub>2</sub>= <span id="rhombus-d2">8</span> cm</p>
+                    <i
+                      id="edit-rhombus-value"
+                      class="fa-regular fa-pen-to-square"
+                      title="Edit Value"
+                    ></i>
+                  </div>
+                  <div id="hidden4" class="mb-3 w-100 d-none">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-rhombus-1"
+                      value="b"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-rhombus-2"
+                      value="h"
+                    />
+                    <span>cm</span>
+                    <i
+                      id="set-rhombus-value"
+                      class="fa-solid ms-2 text-primary fa-square-check"
+                      title="Set Value"
+                    ></i>
+                  </div>
+                  <button id="btn-rhombus" class="btn btn-primary w-100 my-2">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div id="each-card5" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/pentagon.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Pentagon</h4>
+                  <p class="fs-5 fw-medium">Area(A) = 0.5 x p x b</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto"
+                  >
+                    <p>p= <span id="pentagon-p">6</span> cm</p>
+                    <p>b= <span id="pentagon-b">10</span> cm</p>
+                    <i
+                      id="edit-pentagon-value"
+                      class="fa-regular fa-pen-to-square"
+                      title="Edit Value"
+                    ></i>
+                  </div>
+                  <div id="hidden5" class="mb-3 w-100 d-none">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-pentagon-1"
+                      value="b"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-pentagon-2"
+                      value="h"
+                    />
+                    <span>cm</span>
+                    <i
+                      id="set-pentagon-value"
+                      class="fa-solid ms-2 text-primary fa-square-check"
+                      title="Set Value"
+                    ></i>
+                  </div>
+                  <button id="btn-pentagon" class="btn btn-primary w-100 my-2">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div id="each-card6" class="card h-100 py-3 px-2 text-center">
+                <img
+                  src="images/ellipse.png"
+                  class="card-img-top w-75 mx-auto my-3"
+                  style="height: 155px"
+                />
+                <div class="card-body">
+                  <h4>Ellipse</h4>
+                  <p class="fs-5 fw-medium">Area(A) = πab</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center w-75 mb-3 mx-auto"
+                  >
+                    <p>a= <span id="ellipse-a">10</span> cm</p>
+                    <p>b= <span id="ellipse-b">4</span> cm</p>
+                    <i
+                      id="edit-ellipse-value"
+                      class="fa-regular fa-pen-to-square"
+                      title="Edit Value"
+                    ></i>
+                  </div>
+                  <div id="hidden6" class="mb-3 w-100 d-none">
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-ellipse-1"
+                      value="b"
+                    />
+                    <span>cm</span>
+                    <input
+                      class="bg-secondary-subtle border-0 w-25"
+                      type="text"
+                      id="input-ellipse-2"
+                      value="h"
+                    />
+                    <span>cm</span>
+                    <i
+                      id="set-ellipse-value"
+                      class="fa-solid ms-2 text-primary fa-square-check"
+                      title="Set Value"
+                    ></i>
+                  </div>
+                  <button id="btn-ellipse" class="btn btn-primary w-100 my-2">
+                    Calculate
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
+        <div class="col-md-3 col-12">
+          <div id="area-ans" class="card px-2 w-100" style="height: 400px">
+            <h5 class="text-decoration-underline text-center p-3">
+              Area Calculation
+            </h5>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <div id="myDiv">This is some text.</div>
-    
     <script src="./js/bootstrap.js"></script>
     <script src="./js/functionStor.js"></script>
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
