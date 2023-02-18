@@ -1,6 +1,6 @@
 // bolg 
 document.getElementById('blog').addEventListener('click', function(){
-    window.location.href = 'blog.html';
+    window.open("blog.html");
 })
 
 
@@ -9,9 +9,8 @@ document.getElementById('blog').addEventListener('click', function(){
 // ==================================
 document.getElementById('btn-tringle').addEventListener('click', function () {
     const b = parseFloat(getValueFromInput('input-tringle-1'));
-    console.log(b);
     const h = parseFloat(getValueFromInput('input-tringle-2'));
-    if(typeof b == 'number' && b >= 0 && typeof h == 'number' && h >= 0){
+    if(typeof b === 'number' && b >= 0 && typeof h === 'number' && h >= 0){
         const A = 0.5 * b * h;
         setAns('Triangle', A);
     }
@@ -31,7 +30,7 @@ document.getElementById('btn-tringle').addEventListener('click', function () {
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const W = parseFloat(getValueFromInput('input-rectangle-1'));
     const L = parseFloat(getValueFromInput('input-rectangle-2'));
-    if(typeof W == 'number' && W >= 0 && typeof L == 'number' && L >= 0){
+    if(typeof W === 'number' && W >= 0 && typeof L === 'number' && L >= 0){
         const A = W * L ;
         setAns('Rectangle', A);
     }
@@ -39,6 +38,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
         alert('Invalid Value!  Provide valid Number.');
     }
 });
+
 
 
 
