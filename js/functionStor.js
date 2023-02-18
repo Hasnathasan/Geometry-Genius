@@ -6,33 +6,7 @@ function getValueFromInput(id){
   const value = document.getElementById(id).value;
   return value;
 }
-// function setAns(name, A){
-//     const div = document.createElement('div');
-//     const li1 = document.createElement('li');
-//     li1.innerText = name;
-//     const sup = document.createElement('sup');
-//     sup.innerText = 2;
-//     const li2 = document.createElement('li');
-//     const cm2 = document.createElement('p');
-//     cm2.innerText = 'cm';
-//     cm2.appendChild(sup);
-//     li2.innerText = A + cm2.innerText;
-//     console.log(li2)
-//     const button = document.createElement('button');
-//     button.classList.add('btn', 'btn-primary', 'fs-6');
-//     const p1 = document.createElement('p');
-//     p1.innerText = 'hi';
-//     p1.appendChild(sup);
-//     console.log(p1)
-//     button.innerText = 'Convert to ' + dd.innerText;
-//     div.appendChild(li1);
-//     div.appendChild(li2);
-//     div.appendChild(button);
-//     div.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-4', 'fs-6');
-//     const setAddress = document.getElementById('area-ans');
-//     setAddress.appendChild(div);
-//     console.log(div);
-// }
+
 
 
 function setAns(name, A) {
