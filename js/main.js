@@ -1,5 +1,5 @@
 // bolg 
-document.getElementById('blog').addEventListener('click', function(){
+document.getElementById('blog').addEventListener('click', function () {
     window.open("blog.html");
 })
 
@@ -10,14 +10,14 @@ document.getElementById('blog').addEventListener('click', function(){
 document.getElementById('btn-tringle').addEventListener('click', function () {
     const b = parseFloat(getValueFromInput('input-tringle-1'));
     const h = parseFloat(getValueFromInput('input-tringle-2'));
-    if(typeof b === 'number' && b >= 0 && typeof h === 'number' && h >= 0){
+    if (typeof b === 'number' && b >= 0 && typeof h === 'number' && h >= 0) {
         const A = 0.5 * b * h;
         setAns('Triangle', A);
     }
-    else{
+    else {
         alert('Invalid Value!  Provide valid Number.');
     }
-    
+
 });
 
 
@@ -30,11 +30,11 @@ document.getElementById('btn-tringle').addEventListener('click', function () {
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     const W = parseFloat(getValueFromInput('input-rectangle-1'));
     const L = parseFloat(getValueFromInput('input-rectangle-2'));
-    if(typeof W === 'number' && W >= 0 && typeof L === 'number' && L >= 0){
-        const A = W * L ;
+    if (typeof W === 'number' && W >= 0 && typeof L === 'number' && L >= 0) {
+        const A = W * L;
         setAns('Rectangle', A);
     }
-    else{
+    else {
         alert('Invalid Value!  Provide valid Number.');
     }
 });
@@ -90,33 +90,33 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
 // Color Change by mouseenter
 // ---------------------------
 
-  
-document.getElementById('each-card1').addEventListener('mouseenter', function(event) {
+
+document.getElementById('each-card1').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
 })
-document.getElementById('each-card2').addEventListener('mouseenter', function(event) {
+document.getElementById('each-card2').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
 })
-document.getElementById('each-card3').addEventListener('mouseenter', function(event) {
+document.getElementById('each-card3').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
 })
-document.getElementById('each-card4').addEventListener('mouseenter', function(event) {
+document.getElementById('each-card4').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
 })
-document.getElementById('each-card5').addEventListener('mouseenter', function(event) {
+document.getElementById('each-card5').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
 })
-document.getElementById('each-card6').addEventListener('mouseenter', function(event) {
+document.getElementById('each-card6').addEventListener('mouseenter', function (event) {
     const color = getRandomColor();
     const eachItem = event.target;
     eachItem.style.backgroundColor = color;
@@ -169,15 +169,15 @@ document.getElementById('edit-ellipse-value').addEventListener('click', function
 
 
 
-document.getElementById('set-parallelogram-value').addEventListener('click', function(){
+document.getElementById('set-parallelogram-value').addEventListener('click', function () {
     setValue('input-parallelogram-1', 'input-parallelogram-2', 'parallelogram-b', 'parallelogram-h');
 })
-document.getElementById('set-rhombus-value').addEventListener('click', function(){
+document.getElementById('set-rhombus-value').addEventListener('click', function () {
     setValue('input-rhombus-1', 'input-rhombus-2', 'rhombus-d1', 'rhombus-d2');
 })
-document.getElementById('set-pentagon-value').addEventListener('click', function(){
+document.getElementById('set-pentagon-value').addEventListener('click', function () {
     setValue('input-pentagon-1', 'input-pentagon-2', 'pentagon-p', 'pentagon-b');
 })
-document.getElementById('set-ellipse-value').addEventListener('click', function(){
+document.getElementById('set-ellipse-value').addEventListener('click', function () {
     setValue('input-ellipse-1', 'input-ellipse-2', 'ellipse-a', 'ellipse-b');
 })
